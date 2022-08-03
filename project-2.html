@@ -142,18 +142,39 @@
 
             <div class="project-details__content-main">
               <div class="project-details__desc">
-                <h3 class="project-details__content-title">Animated NPC</h3>
+                <h3 class="project-details__content-title">Team Work and Version Control</h3>
                 <p class="project-details__desc-para">
-                 Animated NPC using Mixamo animations and had them walking a random path in the scene through Transform points.
+                The team used SourceTree to share and merge our project files. As the Lead developer, 
+                I was the main point of contact for the rest of the team with regards to setting up their SourceTree files, 
+                linking their Personal Access Tokens and troubleshooting any issues. 
+              </p>
 
-                ...(Code)...(Image)...
+                <p class="project-details__desc-para">
+                  I enjoyed the challenges that came from working with the team completely remotely, for instance quickly troubleshooting when people had errors
+                  merging files, when someone deleted all their assets and needed to revert the project to an earlier version and advising on deployment.
                 </p>
-                <h3 class="project-details__content-title">Educational Space</h3>
-                <p class="project-details__desc-para">
-                  Wanting to keep the natural element to the space, we created round a round mesh to play videos which were provided by 
-                  the Guardians Worldwide project whose aim is to facilitate education on indigenous communities globally. 
 
-                  ...(Code)...(Video set up image)...
+                <h3 class="project-details__content-title">Animating Characters</h3>
+                <p class="project-details__desc-para">
+                Both the Player and NPC are animated using Mixamo animations, including walking, side stepping and waving. 
+                When the player moves backwards the walking animation is reversed to differentiate between forwards and backwards. 
+                When the player looks in the mirror they can see themselves side stepping. 
+                Also if the player walks up to the NPC Danu in the scene, they will stop following their pathway, turn to the player and wave. 
+                They will then wait until the player walks away before returning to walking their path. 
+                </p>
+                <h3 class="project-details__content-title">NPC Pathway</h3>
+                <p class="project-details__desc-para">
+                 I set up the pathway for the NPC to walk using NavMesh and an array of Transforms. 
+                 Using Random Range the NPC is then set to move between the different Transform points as the compiler wishes. 
+                 This was an upgrade on using defined Vector3 positions in an array in the code, as now other members of the team can add or change Transforms as they wish. 
+                </p>
+                <h3 class="project-details__content-title">Interactive Space</h3>
+                <p class="project-details__desc-para">
+                  Wanting to keep the biophillic design of the space, we created round a round mesh to play videos which were provided by 
+                  the Guardians Worldwide project whose aim is to facilitate education on indigenous communities globally. 
+                </p>
+                <p class="project-details__desc-para">
+                  To create the mirror, I used the input of a second camera as a render texture and flipped it to reflect the scene.
                 </p>
               </div>
  

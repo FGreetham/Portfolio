@@ -87,7 +87,7 @@
         <h1 class="heading-primary">Allotment Adventure</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Simple, "open-garden" game where the player can do whatever they wish. There are no set objectives, 
+            Simple, "open-world" game where the player can do whatever they wish. There are no set objectives, 
                but all player interactions in the garden are tracked and saved.
                Built using Unity and C#. 
           </p>
@@ -109,23 +109,55 @@
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
-              <h3 class="project-details__content-title">Project Overview</h3>
+              <h3 class="project-details__content-title">Object Oriented Programming</h3>
               <p class="project-details__desc-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                alias tenetur minus quaerat aliquid, aut provident blanditiis,
-                deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae
-                mollitia laborum corrupti ullam rem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Neque alias tenetur minus quaerat
-                aliquid, aut provident blanditiis, deleniti aspernatur ipsam
-                eaque veniam voluptatem corporis vitae mollitia laborum corrupti
-                ullam rem?
+                Using principles of OOP, I tried to incorporate a seperation of concerns within my scripts and 
+                implemented a class for player interactions, which could be inherited 
+                across my classes that dealt with any kind of object interaction through raycasting. 
+                This is useful for scaling up in the future if I want to add more objects.
               </p>
               <p class="project-details__desc-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                alias tenetur minus quaerat aliquid, aut provident blanditiis,
-                deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae
-                mollitia laborum corrupti ullam rem?
+              I also refactored my code to make it less tightly coupled, so I could push the variables straight to my 'DataManager' script 
+              when influenced by the player. This reduced the need for other scripts to reference each other and I could collate the player 
+              interactions in one place from the start. 
               </p>
+
+              <h3 class="project-details__content-title">Data Collection and JSON</h3>
+              <p class="project-details__desc-para">
+                The variables updated based on player interaction where hosted in a singleton class 'DataManager', as referenced above. 
+                This was then serialized into a JSON file which can be accessed by the player, or ideally, whoever requires this infomation on the player. 
+              </p>
+
+              <p class="project-details__desc-para">
+                I wanted to learn how to push player interaction variables to an external file as I think on a grander scale it's useful to pick out data for understanding 
+                play styles, areas that players focus on or don't interact with at all and much more. 
+              </p>
+              <h3 class="project-details__content-title">Questmaster</h3>
+              <p class="project-details__desc-para">
+                A large part of my focus was on my NPC and the side quests the player can choose to partake in. 
+                There are 3 simple tasks presented and I tracked if the player started the task or clicked 'No' to it. When the player fulfills a task they have started,
+                 that index is tracked and that completed task will no longer show up in the list of optional quests from the NPC. 
+              </p>
+              <p class="project-details__desc-para">
+                The tasks will continuously loop around if the player says no (Code Image).
+                
+              </p>
+              <p class="project-details__desc-para">
+                The tasks will be removed from the list if they complete it (Code Image).
+                
+              </p>
+              <p class="project-details__desc-para">
+                Once all tasks are complete, they get a different message box and this is tracked. 
+                
+              </p>
+
+              <h3 class="project-details__content-title">Close the Door</h3>
+              <p class="project-details__desc-para">
+                The only task given to the player from the beginning was to close and lock the shed door. 
+                I was inspired by The Door Problem in game design and wanted to explore a small part of it 
+                with regard to doors being closed and locked by the player.
+              </p>
+
             </div>
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tools Used</h3>
