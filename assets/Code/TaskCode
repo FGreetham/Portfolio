@@ -1,0 +1,44 @@
+   { //If no task actively running, moves through array to next task.
+        if (taskActive[taskIndex] == false)
+        {
+            CheckIfComplete();
+        }
+    }
+
+    void CheckIfComplete()
+    {
+        MoveThroughTasks(1);
+
+        //If the current task isn't complete, will give the option to start the task at that index.
+        if (taskComplete[taskIndex] == false)
+        {
+            cameraControls.enabled = false;
+            playerController.enabled = false;
+            npc1Tasks[taskIndex].SetActive(true);
+        }
+
+        //If task at current index is completed already, use recursion to move through array of tasks again and recheck.
+        else if(taskComplete[taskIndex] == true)
+        {
+            if (DataManagerScript.instance.tasksComplete == 3)
+                return;
+            else if (DataManagerScript.instance.tasksComplete < 3)
+            {
+                CheckIfComplete();
+            }
+        }
+    }
+
+    public void MoveThroughTasks(int increase)
+    {
+       
+        taskIndex = taskIndex % npc1Tasks.Length;
+
+        if (npc1Tasks.Length - 1 == taskIndex)
+        {
+            taskIndex = 0;
+        }
+        else
+            //Task 1 is at index 1. Index 0 is skipped on the first loop and then it iterates back through.
+            taskIndex += increase; 
+    }
